@@ -1,0 +1,6 @@
+apiVersion: v2
+name: chonkforge
+description: A natively-multimodal 1T sparse-MoE frontier framework
+type: application
+version: 0.1.0
+appVersion: "1.0.0"

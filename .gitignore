@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# project data (anchored to repo root; do NOT swallow chonkforge/data/)
+/data/
+/logs/
+outputs/
+
+# checkpoints + push cache
+.chonkforge_ckpt*
+.ckpt_*
+.push_cache.json
+
+# env
+.env
+*.local

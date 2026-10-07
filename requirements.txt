@@ -1,0 +1,6 @@
+# chonkforge is zero-dependency for the core + mock/cpu backends.
+# Optional extras for the OpenAI / vLLM / Transformers backends:
+requests>=2.31
+# vllm
+# transformers>=4.40
+# pyyaml  # optional; a stdlib YAML-subset fallback is bundled

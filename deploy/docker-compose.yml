@@ -1,0 +1,10 @@
+services:
+  chonkforge:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - CHONK_BACKEND=mock
+    restart: unless-stopped

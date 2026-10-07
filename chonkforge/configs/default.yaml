@@ -1,0 +1,37 @@
+# chonkforge default configuration
+# NOTE: the *runnable* reference uses a small MoE so it runs on a CPU in
+# seconds. The frontier scale (1T total / 49B active) is captured analytically
+# by the scaling benchmark (sparse_ratio = n_experts / top_k) and documented in
+# docs/SCALING.md -- do NOT instantiate a 1T-parameter MoE in pure Python.
+model:
+  vocab: 256
+  dim: 16
+  hidden: 32
+  n_experts: 16
+  top_k: 2
+  n_layers: 1
+  n_heads: 4
+  window: 8
+  n_global: 2
+  patch: 4
+  img_h: 8
+  img_w: 8
+  total_params_hint: "1T"
+  active_params_hint: "49B"
+
+backend:
+  name: mock
+  seed: 0
+  base_url: ""
+  api_key: ""
+  model: ""
+
+train:
+  epochs: 4
+  lr: 0.1
+  steps: 40
+
+serve:
+  host: "127.0.0.1"
+  port: 8000
+  auth_token: ""

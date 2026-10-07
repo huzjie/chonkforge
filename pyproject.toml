@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chonkforge"
+version = "1.0.0"
+description = "A natively-multimodal 1T sparse-MoE frontier framework (Mistral Large 4 / Le Chonk direction)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "chonkforge contributors"}]
+
+[project.scripts]
+chonkforge = "chonkforge.cli.main:main"
+
+[tool.setuptools.packages.find]
+include = ["chonkforge*"]
